@@ -12,11 +12,9 @@ peer.ondatachannel = (event) => {
 let nombreUsuario
 let chateandoCon
 
-const usarNombre = document.getElementById('nombreForm')
+const usarNombre = document.getElementById('usarNombre')
 
-usarNombre.addEventListener('submit', (e) => {
-	e.preventDefault()
-
+usarNombre.addEventListener('click', () => {
 	const nombre = document.getElementById('nombreInput').value
 
 	if (nombre.trim()) {
