@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Arquitectura Peer to Peer</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-gray-100 flex items-center justify-center h-screen">
+		<div class="bg-white p-6 rounded-lg shadow-lg text-center w-96">
+			<h1 class="text-2xl font-bold text-blue-600">
+				Arquitectura Peer to Peer
+			</h1>
+
+			<form id="nombreForm">
+				<input
+					id="nombreInput"
+					type="text"
+					placeholder="Introduce un nombre..."
+					class="mt-4 w-full px-3 py-2 border rounded-md text-center"
+					minlength="4"
+					required
+				/>
+				<button
+					id="usarNombre"
+					class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded"
+					type="submit"
+				>
+					Confirmar
+				</button>
+			</form>
+
+			<p
+				class="mt-4 text-black hidden"
+				id="nombre"
+			>
+				Tu:
+				<span
+					class="text-green-500"
+					id="contenidoNombre"
+					>nombre</span
+				>
+			</p>
+
+			<div
+				class="pt-4 hidden"
+				id="usuarios"
+			>
+				<h2 class="text-xl font-bold mb-4">Chatea con alguien:</h2>
+				<p
+					class="text-gray-500 text-sm underline"
+					id="noHayUsuarios"
+				>
+					No hay usuarios para chatear
+				</p>
+				<ul
+					id="user-list"
+					class="space-y-2"
+				>
+					<!-- Los usuarios se llenarán dinámicamente con JavaScript -->
+				</ul>
+			</div>
+
+			<div
+				id="chat"
+				class="hidden mt-4"
+			>
+				<h2 class="text-lg font-bold text-gray-700">Mensajes</h2>
+				<ul
+					id="messageList"
+					class="border p-2 rounded h-40 overflow-auto text-left"
+				></ul>
+				<input
+					id="messageInput"
+					type="text"
+					placeholder="Escribe un mensaje"
+					class="mt-2 w-full px-3 py-2 border rounded-md text-center"
+				/>
+				<button
+					id="sendMessage"
+					class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded"
+				>
+					Enviar
+				</button>
+			</div>
+			<p class="mt-4 text-gray-500 text-sm">
+				Grupo 12, Ingeniería en Software II
+			</p>
+			<p class="mt-4 text-gray-500 text-sm">
+				Integrantes: Barrientos Franco, Cabrera Romani Lucas Iván, De Los Santos
+				Francisco Nicolás, Echeverría Theo Benjamin
+			</p>
+		</div>
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+{
+	"name": "p2p",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon --config nodemon.json src/server.ts",
+		"build": "tsc",
+		"start": "node ./src/server.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/express": "^5.0.1",
+		"@types/node": "^22.14.0",
+		"@types/socket.io": "^3.0.2",
+		"express": "^5.1.0",
+		"socket.io": "^4.8.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.2"
+	}
+}
